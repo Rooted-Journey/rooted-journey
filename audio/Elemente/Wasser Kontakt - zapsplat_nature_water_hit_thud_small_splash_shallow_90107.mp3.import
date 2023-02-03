@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Wasser Kontakt - zapsplat_nature_water_hit_thud_small_splash_shallow_90107.mp3-1fca6d3042ae8992399258d3b8fb6677.mp3str"
+
+[deps]
+
+source_file="res://audio/Elemente/Wasser Kontakt - zapsplat_nature_water_hit_thud_small_splash_shallow_90107.mp3"
+dest_files=[ "res://.import/Wasser Kontakt - zapsplat_nature_water_hit_thud_small_splash_shallow_90107.mp3-1fca6d3042ae8992399258d3b8fb6677.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

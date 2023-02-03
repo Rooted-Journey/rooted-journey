@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Lava Kontakt Alternative - smartsound_WEAPONS_FLAMETHROWER_Medium_Heavy_Single_01.mp3-880de32c176c968a02ca053236ba69ba.mp3str"
+
+[deps]
+
+source_file="res://audio/Elemente/Lava Kontakt Alternative - smartsound_WEAPONS_FLAMETHROWER_Medium_Heavy_Single_01.mp3"
+dest_files=[ "res://.import/Lava Kontakt Alternative - smartsound_WEAPONS_FLAMETHROWER_Medium_Heavy_Single_01.mp3-880de32c176c968a02ca053236ba69ba.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

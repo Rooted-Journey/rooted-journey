@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Ziege erscheint gleich - audio_hero_Goat_DIGIVC2-92 (mp3cut.net).mp3-a290e2a30447bf520a31287f3ebe0837.mp3str"
+
+[deps]
+
+source_file="res://audio/Tiere/Ziege erscheint gleich - audio_hero_Goat_DIGIVC2-92 (mp3cut.net).mp3"
+dest_files=[ "res://.import/Ziege erscheint gleich - audio_hero_Goat_DIGIVC2-92 (mp3cut.net).mp3-a290e2a30447bf520a31287f3ebe0837.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

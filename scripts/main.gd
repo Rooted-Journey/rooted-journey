@@ -1,12 +1,10 @@
 extends Node2D
 
 onready var cam = $mainCam
+var camDelta = Vector2(0, 100)
 
 func _ready():
 	pass
 	
 func _process(delta):
-	var pos = cam.position
-	pos.y = pos.y + 0.01
-	cam.set_position(pos)
-	
+	cam.position += delta * camDelta

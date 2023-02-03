@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Tier kaut leise - zapsplat_human_eat_crunch_wasabi_pea_mouth_closed_50030.mp3-60fbe95457b5b81841c50188a85a0b16.mp3str"
+
+[deps]
+
+source_file="res://audio/Tiere/Tier kaut leise - zapsplat_human_eat_crunch_wasabi_pea_mouth_closed_50030.mp3"
+dest_files=[ "res://.import/Tier kaut leise - zapsplat_human_eat_crunch_wasabi_pea_mouth_closed_50030.mp3-60fbe95457b5b81841c50188a85a0b16.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

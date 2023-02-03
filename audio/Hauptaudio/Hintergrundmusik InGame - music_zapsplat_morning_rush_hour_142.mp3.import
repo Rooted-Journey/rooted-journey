@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Hintergrundmusik InGame - music_zapsplat_morning_rush_hour_142.mp3-49de7efec69990746525e428b2d2cb3d.mp3str"
+
+[deps]
+
+source_file="res://audio/Hauptaudio/Hintergrundmusik InGame - music_zapsplat_morning_rush_hour_142.mp3"
+dest_files=[ "res://.import/Hintergrundmusik InGame - music_zapsplat_morning_rush_hour_142.mp3-49de7efec69990746525e428b2d2cb3d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

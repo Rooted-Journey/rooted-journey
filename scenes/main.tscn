@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://graphics/tree.png" type="Texture" id=1]
 [ext_resource path="res://scripts/main.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://audio/Hauptaudio/Hintergrundmusik InGame - music_zapsplat_morning_rush_hour_142.mp3" type="AudioStream" id=6]
 [ext_resource path="res://scenes/TreeRoot.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scripts/mainCam.gd" type="Script" id=8]
+[ext_resource path="res://scenes/Walls.tscn" type="PackedScene" id=9]
 
 [node name="main" type="Node2D"]
 script = ExtResource( 2 )
@@ -56,3 +57,6 @@ stream = ExtResource( 6 )
 autoplay = true
 
 [node name="TreeRoot" parent="." instance=ExtResource( 7 )]
+
+[node name="Walls" parent="." instance=ExtResource( 9 )]
+position = Vector2( -189, 377 )

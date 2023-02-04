@@ -9,7 +9,7 @@ export var speedMultiplier = 200
 func _ready():
 	add_point(Vector2(xCoord, treebottom))
 
-func _process(delta):
+func _physics_process(delta):
 	if cam.position.y < treebottom:
 		return
 
@@ -22,5 +22,5 @@ func _process(delta):
 	
 	while get_point_count() > 1000:
 		remove_point(0)
-	
+		
 	update()

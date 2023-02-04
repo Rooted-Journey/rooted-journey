@@ -8,6 +8,7 @@ export var speedMultiplier = 200
 
 func _ready():
 	add_point(Vector2(xCoord, treebottom))
+	$Head.position = Vector2(xCoord, treebottom)
 
 func _physics_process(delta):
 	if cam.position.y < treebottom:
@@ -18,7 +19,14 @@ func _physics_process(delta):
 	if(Input.is_action_pressed("ui_left")):
 		xCoord -= delta * speedMultiplier
 	
-	add_point(Vector2(xCoord, cam.position.y))
+	var lastPoint = points[points.size() - 1]
+	var newPoint = Vector2(xCoord, cam.position.y)
+
+	var coll = $Head.move_and_collide(newPoint - lastPoint)
+	if coll:
+		print(coll.position)
+		
+	add_point(newPoint)
 	
 	while get_point_count() > 1000:
 		remove_point(0)

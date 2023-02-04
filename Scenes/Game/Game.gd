@@ -9,6 +9,7 @@ var moleArr = []
 func _ready():
 	randomize()
 	startTime = OS.get_system_time_msecs()
+	$HUD/Speed.text = "Speed: " + str($MainCam.camDelta.y - 100)
 	
 func _process(delta):
 	$MainCam.position += delta * $MainCam.camDelta
@@ -58,4 +59,7 @@ func _on_MoleTimer_timeout():
 		for i in range(moleArr.size()-10):
 			moleArr[i].queue_free()
 			moleArr.remove(i)
-
+			
+	# And now, make the camera faster
+	$MainCam.camDelta.y += 5
+	$HUD/Speed.text = "Speed: " + str($MainCam.camDelta.y - 100)

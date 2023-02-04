@@ -1,11 +1,14 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenes/TreeRoot/TreeRoot.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Graphics/root_texture.png" type="Texture" id=2]
 
 [node name="TreeRoot" type="Line2D"]
 position = Vector2( 176, -76 )
 scale = Vector2( 2.25206, 2.62928 )
 z_index = 100
 width = 27.0
-default_color = Color( 0.611765, 0.47451, 0.305882, 1 )
+default_color = Color( 0, 0, 0, 1 )
+texture = ExtResource( 2 )
+texture_mode = 1
 script = ExtResource( 1 )

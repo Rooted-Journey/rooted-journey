@@ -1,19 +1,27 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Menu/Startbutton.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Graphics/schdarden.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Graphics/button_start.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Audio/Hauptaudio/Hauptmenü - zapsplat_nature_forest_bamboo_tree_blow_creak_in_wind_birds_in_bg_australia_001_30138.mp3" type="AudioStream" id=3]
-[ext_resource path="res://Assets/Graphics/credits.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Graphics/button_credits.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/Menu/Creditsbutton.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Graphics/start.png" type="Texture" id=6]
 
 [node name="Menu" type="Node2D"]
 position = Vector2( -2, 4 )
 
+[node name="BackgroundPic" type="TextureRect" parent="."]
+margin_left = 2.0
+margin_top = -3.0
+margin_right = 1026.0
+margin_bottom = 597.0
+texture = ExtResource( 6 )
+
 [node name="Startbutton" type="Button" parent="."]
-margin_left = 299.0
-margin_top = 226.0
-margin_right = 727.0
-margin_bottom = 358.0
+margin_left = 100.0
+margin_top = 449.0
+margin_right = 232.0
+margin_bottom = 491.0
 icon = ExtResource( 2 )
 script = ExtResource( 1 )
 
@@ -22,10 +30,10 @@ stream = ExtResource( 3 )
 autoplay = true
 
 [node name="Creditsbutton" type="Button" parent="."]
-margin_left = 401.0
-margin_top = 405.0
-margin_right = 638.0
-margin_bottom = 491.0
+margin_left = 100.0
+margin_top = 497.0
+margin_right = 232.0
+margin_bottom = 539.0
 icon = ExtResource( 4 )
 script = ExtResource( 5 )
 

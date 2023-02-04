@@ -16,4 +16,4 @@ func _ready():
 		array.push_back(Vector2(randX, y)) # Random offset
 	
 	$WallLeft/Polygon2D.polygon = array
-	$WallLeft/Polygon2D.polygon = array
+	$WallLeft/CollisionPolygon2D.polygon = array

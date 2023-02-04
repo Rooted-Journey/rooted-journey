@@ -66,11 +66,11 @@ stream = ExtResource( 6 )
 autoplay = true
 
 [node name="TreeRoot" parent="." instance=ExtResource( 7 )]
+position = Vector2( 0, 0 )
+scale = Vector2( 1, 1 )
 
 [node name="Walls" parent="." instance=ExtResource( 9 )]
 position = Vector2( 0, 380 )
-
-[node name="Sprite" type="Sprite" parent="."]
 
 [node name="Meadow2" parent="." instance=ExtResource( 10 )]
 margin_left = -1810.0
@@ -89,10 +89,9 @@ custom_colors/default_color = Color( 1, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 1 )
 text = "SCORE"
 
-[node name="Node2D" type="Node2D" parent="."]
-modulate = Color( 0.945098, 0.101961, 0.0588235, 1 )
-self_modulate = Color( 0.0431373, 0.0156863, 0.0156863, 1 )
-light_mask = 7
-material = SubResource( 2 )
-position = Vector2( 10, 10 )
-z_index = 5
+[node name="MoleTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="MoleTimer" to="." method="_on_MoleTimer_timeout"]
+

@@ -25,10 +25,10 @@ current = true
 script = ExtResource( 8 )
 
 [node name="Meadow" type="TextureRect" parent="."]
-margin_left = -192.0
+margin_left = -1424.0
 margin_top = 314.0
-margin_right = 1341.0
-margin_bottom = 377.0
+margin_right = 3508.0
+margin_bottom = 442.0
 texture = ExtResource( 3 )
 stretch_mode = 1
 
@@ -37,17 +37,17 @@ position = Vector2( 294, 25 )
 scale = Vector2( 0.926157, 1 )
 
 [node name="Earth" type="TextureRect" parent="."]
-margin_left = -192.0
+margin_left = -1873.0
 margin_top = 377.0
-margin_right = 1341.0
+margin_right = 3630.0
 margin_bottom = 1424.0
 texture = ExtResource( 5 )
 expand = true
 
 [node name="Sky" type="TextureRect" parent="."]
-margin_left = -30.0
+margin_left = -1420.0
 margin_top = -86.0
-margin_right = 1073.0
+margin_right = 2912.0
 margin_bottom = 314.0
 texture = ExtResource( 4 )
 expand = true

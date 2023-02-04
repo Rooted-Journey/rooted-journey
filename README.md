@@ -6,4 +6,4 @@
 
 Created on the Global Game Jam 2023: https://globalgamejam.org/2023/games/rooted-journey-2
 
-Play it: http://rootedjourney.de
+Play it: https://rootedjourney.de

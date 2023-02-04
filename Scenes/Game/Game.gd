@@ -25,9 +25,9 @@ func _process(delta):
 	if moleArr.size() > 0:
 		for i in range(moleArr.size()):
 			if moleArr[i].flip_h == true:
-				moleArr[i].position.x += 0.05
+				moleArr[i].position.x += delta * 100
 			else:
-				moleArr[i].position.x -= 0.05
+				moleArr[i].position.x -= delta * 100
 	
 func _on_MoleTimer_timeout():
 	if randi() % 10 + 1 >= 5:

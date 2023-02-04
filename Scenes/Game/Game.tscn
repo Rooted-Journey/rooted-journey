@@ -13,7 +13,7 @@
 [ext_resource path="res://Assets/Fonts/ShareTechMono-Regular.ttf" type="DynamicFontData" id=11]
 
 [sub_resource type="DynamicFont" id=1]
-size = 32
+size = 33
 font_data = ExtResource( 11 )
 
 [node name="main" type="Node2D"]
@@ -84,4 +84,4 @@ margin_right = 675.0
 margin_bottom = 50.0
 custom_colors/default_color = Color( 1, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 1 )
-text = "LALA"
+text = "SCORE"

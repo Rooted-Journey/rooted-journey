@@ -2,6 +2,10 @@
 
 [ext_resource path="res://Scenes/TreeRoot/TreeRoot.gd" type="Script" id=1]
 
-
-[node name="TreeRoot" type="Node2D"]
+[node name="TreeRoot" type="Line2D"]
+position = Vector2( 176, -76 )
+scale = Vector2( 2.25206, 2.62928 )
+default_color = Color( 0.648438, 0.497726, 0.303955, 1 )
+joint_mode = 2
+antialiased = true
 script = ExtResource( 1 )

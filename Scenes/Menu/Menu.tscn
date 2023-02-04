@@ -3,9 +3,8 @@
 [ext_resource path="res://Scenes/Menu/Startbutton.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Graphics/schdarden.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Audio/Hauptaudio/Hauptmenü - zapsplat_nature_forest_bamboo_tree_blow_creak_in_wind_birds_in_bg_australia_001_30138.mp3" type="AudioStream" id=3]
-[ext_resource path="res://Scenes/Menu/Creditsbutton.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Graphics/credits.png" type="Texture" id=4]
-
+[ext_resource path="res://Scenes/Menu/Creditsbutton.gd" type="Script" id=5]
 
 [node name="Menu" type="Node2D"]
 position = Vector2( -2, 4 )

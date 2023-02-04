@@ -12,7 +12,7 @@ echo 'done.'
 
 echo 'Building for linux ...'
 godot --no-window --export 'Linux/X11' dist/linux/rootedJourney.x86_64
-chmod a+x dist/rootedJourney.x86_64
+chmod a+x dist/linux/rootedJourney.x86_64
 echo 'done.'
 
 echo 'Building for Windows ...'

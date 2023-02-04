@@ -78,18 +78,18 @@ margin_bottom = 381.0
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="Score" type="RichTextLabel" parent="HUD"]
-margin_left = 446.0
+margin_left = 451.0
 margin_top = 10.0
-margin_right = 675.0
+margin_right = 680.0
 margin_bottom = 50.0
 custom_colors/default_color = Color( 1, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 1 )
 text = "SCORE"
 
 [node name="Speed" type="RichTextLabel" parent="HUD"]
-margin_left = 398.0
+margin_left = 403.0
 margin_top = 53.0
-margin_right = 627.0
+margin_right = 632.0
 margin_bottom = 93.0
 custom_colors/default_color = Color( 1, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 1 )

@@ -19,7 +19,7 @@ func _process(delta):
 	
 	# Update Score
 	currentTime = OS.get_system_time_msecs() - startTime
-	$HUD/Score.text = str(currentTime)
+	$HUD/Score.text = str(currentTime/100)
 	
 	# Move the moles
 	if moleArr.size() > 0:

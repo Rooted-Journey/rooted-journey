@@ -20,34 +20,33 @@ func _process(delta):
 	currentTime = OS.get_system_time_msecs() - startTime
 	$HUD/Score.text = str(currentTime)
 	
-	# Moles!
+func _on_MoleTimer_timeout():
 	if currentTime > 5000:
-		if randi() % 100000000 > 99950000:
+		if randi() % 10 + 1 > 5:
+			var newMole = Sprite.new()
+			newMole.position.x = randi() % int(get_viewport().size.x)
+			newMole.position.y = randi() % int(get_viewport().size.y) + $MainCam.position.y
+			newMole.centered = false;
+			newMole.set_texture(mole)
+			newMole.z_index = 5
+			newMole.scale.x = 0.5
+			newMole.scale.y = 0.5
 			if randi() % 10 + 1 > 5:
-				var newMole = Sprite.new()
-				newMole.position.x = randi() % int(get_viewport().size.x)
-				newMole.position.y = randi() % int(get_viewport().size.y) + $MainCam.position.y
-				newMole.centered = false;
-				newMole.set_texture(mole)
-				newMole.z_index = 5
-				newMole.scale.x = 0.5
-				newMole.scale.y = 0.5
-				if randi() % 10 + 1 > 5:
-					newMole.flip_h = true
-				$TreeRoot.add_child(newMole)
-				if aktMole:
-					aktMole.queue_free()
-				aktMole = newMole
-			else:
-				var newThing = Sprite.new()
-				newThing.position.x = randi() % int(get_viewport().size.x)
-				newThing.position.y = randi() % int(get_viewport().size.y) + $MainCam.position.y
-				newThing.centered = false;
-				newThing.set_texture(things[randi() % things.size()])
-				newThing.z_index = 5
-				newThing.scale.x = 0.5
-				newThing.scale.y = 0.5				
-				$TreeRoot.add_child(newThing)
+				newMole.flip_h = true
+			$TreeRoot.add_child(newMole)
+			if aktMole:
+				aktMole.queue_free()
+			aktMole = newMole
+		else:
+			var newThing = Sprite.new()
+			newThing.position.x = randi() % int(get_viewport().size.x)
+			newThing.position.y = randi() % int(get_viewport().size.y) + $MainCam.position.y
+			newThing.centered = false;
+			newThing.set_texture(things[randi() % things.size()])
+			newThing.z_index = 5
+			newThing.scale.x = 0.5
+			newThing.scale.y = 0.5
+			$TreeRoot.add_child(newThing)
 		
 		# Move last mole
 		if aktMole:

@@ -67,8 +67,6 @@ autoplay = true
 [node name="Walls" parent="." instance=ExtResource( 9 )]
 position = Vector2( 0, 380 )
 
-[node name="Sprite" type="Sprite" parent="."]
-
 [node name="Meadow2" parent="." instance=ExtResource( 10 )]
 margin_left = -1810.0
 margin_top = 253.0
@@ -85,3 +83,9 @@ margin_bottom = 50.0
 custom_colors/default_color = Color( 1, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 1 )
 text = "SCORE"
+
+[node name="MoleTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="MoleTimer" to="." method="_on_MoleTimer_timeout"]

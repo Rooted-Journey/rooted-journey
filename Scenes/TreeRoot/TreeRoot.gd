@@ -40,7 +40,6 @@ func _process(delta):
 	var mainCam = get_parent().get_node("MainCam")
 	root_position.y = mainCam.position.y + CAMERA_OFFSET
 	set_point_position(points.size() -1, root_position)
-	print("Coordinaten", points[points.size() -1])
 
 	# update()
 

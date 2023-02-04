@@ -29,34 +29,33 @@ func _process(delta):
 				moleArr[i].position.x -= 0.05
 	
 func _on_MoleTimer_timeout():
-	if currentTime > 5000:
-		if randi() % 10 + 1 >= 5:
-			var newMole = Sprite.new()
-			newMole.position.x = randi() % int(get_viewport().size.x)
-			newMole.position.y = randi() % int(get_viewport().size.y) + $MainCam.position.y
-			newMole.centered = false;
-			newMole.set_texture(mole)
-			newMole.z_index = 5
-			newMole.scale.x = 0.5
-			newMole.scale.y = 0.5
-			if randi() % 10 + 1 > 5:
-				newMole.flip_h = true
-			$TreeNode.add_child(newMole)
-			moleArr.append(newMole)
-		else:
-			var newThing = Sprite.new()
-			newThing.position.x = randi() % int(get_viewport().size.x)
-			newThing.position.y = randi() % int(get_viewport().size.y) + $MainCam.position.y
-			newThing.centered = false;
-			newThing.set_texture(things[randi() % things.size()])
-			newThing.z_index = 5
-			newThing.scale.x = 0.5
-			newThing.scale.y = 0.5
-			$TreeNode.add_child(newThing)
-		
-		# Delete too many moles - 10 should be enough at all times
-		if moleArr.size() > 10:
-			for i in range(moleArr.size()-10):
-				moleArr[i].queue_free()
-				moleArr.remove(i)
+	if randi() % 10 + 1 >= 5:
+		var newMole = Sprite.new()
+		newMole.position.x = randi() % int(get_viewport().size.x)
+		newMole.position.y = randi() % int(get_viewport().size.y) + $MainCam.position.y
+		newMole.centered = false;
+		newMole.set_texture(mole)
+		newMole.z_index = 5
+		newMole.scale.x = 0.5
+		newMole.scale.y = 0.5
+		if randi() % 10 + 1 > 5:
+			newMole.flip_h = true
+		$Walls.add_child(newMole)
+		moleArr.append(newMole)
+	else:
+		var newThing = Sprite.new()
+		newThing.position.x = randi() % int(get_viewport().size.x)
+		newThing.position.y = randi() % int(get_viewport().size.y) + $MainCam.position.y
+		newThing.centered = false;
+		newThing.set_texture(things[randi() % things.size()])
+		newThing.z_index = 5
+		newThing.scale.x = 0.5
+		newThing.scale.y = 0.5
+		$Walls.add_child(newThing)
+	
+	# Delete too many moles - 10 should be enough at all times
+	if moleArr.size() > 10:
+		for i in range(moleArr.size()-10):
+			moleArr[i].queue_free()
+			moleArr.remove(i)
 

@@ -5,6 +5,8 @@ var currentTime = 0
 var things = [preload("res://Assets/Graphics/lava.png"), preload("res://Assets/Graphics/uranium.png"), preload("res://Assets/Graphics/water.png")]
 var mole = preload("res://Assets/Graphics/mole.png")
 var moleArr = []
+var MoleScene = preload("res://Scenes/Mole/Mole.tscn")
+
 
 func _ready():
 	randomize()
@@ -31,24 +33,37 @@ func _process(delta):
 	
 func _on_MoleTimer_timeout():
 	if randi() % 10 + 1 >= 5:
-		var newMole = Sprite.new()
+		var newMole = MoleScene.instance()
 		newMole.position.x = randi() % int(get_viewport().size.x)
 		newMole.position.y = randi() % int(get_viewport().size.y) + $MainCam.position.y
-		newMole.centered = false;
-		newMole.set_texture(mole)
-		newMole.z_index = 5
 		newMole.scale.x = 0.5
 		newMole.scale.y = 0.5
-		if randi() % 10 + 1 > 5:
-			newMole.flip_h = true
+#		if randi() % 10 + 1 > 5:
+#			newMole.flip_h = true
 		$Walls.add_child(newMole)
-		moleArr.append(newMole)
+		
+		
+		
+#		var newMole = Sprite.new()
+#		newMole.position.x = randi() % int(get_viewport().size.x)
+#		newMole.position.y = randi() % int(get_viewport().size.y) + $MainCam.position.y
+#		newMole.centered = false;
+#		newMole.set_texture(mole)
+#		newMole.set_physics_process(true)
+#		newMole.z_index = 5
+#		newMole.scale.x = 0.5
+#		newMole.scale.y = 0.5
+#		if randi() % 10 + 1 > 5:
+#			newMole.flip_h = true
+#		$Walls.add_child(newMole)
+#		moleArr.append(newMole)
 	else:
 		var newThing = Sprite.new()
+		var thingNum = randi() % things.size()
 		newThing.position.x = randi() % int(get_viewport().size.x)
 		newThing.position.y = randi() % int(get_viewport().size.y) + $MainCam.position.y
 		newThing.centered = false;
-		newThing.set_texture(things[randi() % things.size()])
+		newThing.set_texture(things[thingNum])
 		newThing.z_index = 5
 		newThing.scale.x = 0.5
 		newThing.scale.y = 0.5

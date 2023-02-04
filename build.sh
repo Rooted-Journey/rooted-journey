@@ -4,7 +4,9 @@
 set -e
 
 rm -rf dist/
-mkdir -p dist
+mkdir -p dist/web
+mkdir -p dist/linux
+mkdir -p dist/windows
 
 echo 'Building for web ...'
 godot --no-window --export "HTML5" dist/web/index.html

@@ -14,10 +14,15 @@ func _physics_process(delta):
 	if cam.position.y < treebottom:
 		return
 
-	if(Input.is_action_pressed("ui_right")):
+	if Input.is_action_pressed("ui_right"):
 		xCoord += delta * speedMultiplier
-	if(Input.is_action_pressed("ui_left")):
+	if Input.is_action_pressed("ui_left"):
 		xCoord -= delta * speedMultiplier
+	if Input.is_mouse_button_pressed(BUTTON_LEFT):
+		if get_local_mouse_position().x > $Head.position.x:
+			xCoord += delta * speedMultiplier
+		else:
+			xCoord -= delta * speedMultiplier
 	
 	var lastPoint = points[points.size() - 1]
 	var newPoint = Vector2(xCoord, cam.position.y)

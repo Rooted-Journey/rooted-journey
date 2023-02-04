@@ -1,7 +1,7 @@
 name: "godot-ci export"
 on:
   push:
-    branches: [main]
+    branches: [master]
   workflow_dispatch:
 
 env:
@@ -23,7 +23,6 @@ jobs:
         run: |
           mkdir -v -p ~/.local/share/godot/templates
           mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
-          wget -O- https://mirror.lewd.wtf/private/nintendo/switch/godot-switch-headless.tar.gz | tar xvzf -
           mv godot-switch-v3.3.4-linux/3.3.4.stable/ ~/.local/share/godot/templates/
       - name: Build
         run: ./build.sh

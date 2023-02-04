@@ -60,3 +60,5 @@ autoplay = true
 
 [node name="Walls" parent="." instance=ExtResource( 9 )]
 position = Vector2( -193, 377 )
+
+[node name="Sprite" type="Sprite" parent="."]

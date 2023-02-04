@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Graphics/meadow_3.png" type="Texture" id=1]
+
+[node name="Meadow" type="TextureRect"]
+margin_left = -1424.0
+margin_top = 314.0
+margin_right = 3508.0
+margin_bottom = 442.0
+texture = ExtResource( 1 )
+stretch_mode = 1
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 294, 25 )
+scale = Vector2( 0.926157, 1 )

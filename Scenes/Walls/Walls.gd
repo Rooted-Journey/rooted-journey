@@ -1,19 +1,20 @@
 extends Node
 
-# TODO: Add as parameters and adjust
-export var width = 1250
-export var height = 500
-export var min_left = 200
-export var max_left = 300
+export var min_offset = 200
+export var max_offset = 300
 const steps = 100
-const difficulty = 1.5 # multiplicator for how far the walls slide to the center
+const difficulty = 1 # multiplicator for how far the walls slide to the center
+
+onready var vpSize = get_viewport().size
+onready var width = int(vpSize.x)
+onready var height = int(vpSize.y)
 
 var offset = 0
 
 func _ready():	
 	regenerate_walls()
 
-func _process(delta):
+func _process(_delta):
 	if $VisibilityNotifier2D.is_on_screen():
 		regenerate_walls()
 
@@ -29,17 +30,17 @@ func regenerate_walls():
 	arrRight.push_back(Vector2(width, offset)) # top right
 	arrRight.push_back(Vector2(width, height + offset)) # bottom right
 	
-	var min_left_eff = int(min_left * difficulty)
-	var max_left_eff = int(max_left * difficulty)
+	var min_left_eff = int(min_offset * difficulty)
+	var max_left_eff = int(max_offset * difficulty)
 	var min_right_eff = width - max_left_eff
 	var max_right_eff = width - min_left_eff
 	
 	for y in range(offset + height, offset, -1 * steps):
 		var randXLeft = randi() % (max_left_eff - min_left_eff) + min_left_eff
-		arrLeft.push_back(Vector2(randXLeft, y)) # Random offset
+		arrLeft.push_back(Vector2(randXLeft, y))
 		
 		var randXRight = randi() % (max_right_eff - min_right_eff) + min_right_eff
-		arrRight.push_back(Vector2(randXRight, y)) # Random offset
+		arrRight.push_back(Vector2(randXRight, y))
 		
 	
 	var leftMerged = _merge_polygons(oldLeft, arrLeft)

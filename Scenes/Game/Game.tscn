@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Assets/Graphics/tree.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Graphics/tree_roots_complete.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Game/Game.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Graphics/meadow_3.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Graphics/background_blue.png" type="Texture" id=4]
@@ -15,7 +15,7 @@
 script = ExtResource( 2 )
 
 [node name="Tree" type="Sprite" parent="."]
-position = Vector2( 536, 122 )
+position = Vector2( 536, 242 )
 scale = Vector2( 0.876953, 0.824219 )
 z_index = 1
 texture = ExtResource( 1 )
@@ -60,7 +60,7 @@ autoplay = true
 [node name="TreeRoot" parent="." instance=ExtResource( 7 )]
 
 [node name="Walls" parent="." instance=ExtResource( 9 )]
-position = Vector2( -193, 377 )
+position = Vector2( 0, 380 )
 
 [node name="Sprite" type="Sprite" parent="."]
 

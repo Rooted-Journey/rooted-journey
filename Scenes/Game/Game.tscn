@@ -13,7 +13,7 @@
 [ext_resource path="res://Assets/Fonts/ShareTechMono-Regular.ttf" type="DynamicFontData" id=11]
 
 [sub_resource type="DynamicFont" id=1]
-size = 32
+size = 33
 font_data = ExtResource( 11 )
 
 [node name="main" type="Node2D"]

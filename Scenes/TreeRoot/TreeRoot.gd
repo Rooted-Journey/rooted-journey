@@ -1,6 +1,6 @@
 extends Node2D
 
-const TREE_OFFSET = 14
+const TREE_OFFSET = 18
 
 func _draw():
 	var tree = get_parent().get_node("Tree")
@@ -10,4 +10,9 @@ func _draw():
 	draw_line(tree_bottom, Vector2(tree_bottom.x, mainCam.position.y), color, 5.0)
 	
 func _process(_delta):
+	if Input.is_action_pressed("ui_left"):
+		
+		pass
+	if Input.is_action_pressed("ui_right"):
+		pass
 	update()

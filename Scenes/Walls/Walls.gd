@@ -15,7 +15,7 @@ var offset = 0
 func _ready():	
 	regenerate_walls()
 
-func _process(delta):
+func _process(_delta):
 	if $VisibilityNotifier2D.is_on_screen():
 		regenerate_walls()
 

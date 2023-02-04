@@ -1,7 +1,7 @@
 extends Node2D
 
 const TREE_OFFSET = -18
-const MOVEMENT_MULTIPLIER = 0.2
+const MOVEMENT_MULTIPLIER = 200
 const ROOT_COLOR = Color(0.648438, 0.497726, 0.303955)
 const CAMERA_OFFSET = 150
 
@@ -21,9 +21,9 @@ func _draw():
 	draw_line(tree_bottom, root_position, ROOT_COLOR, 5.0)
 	
 func _process(delta):
-	if Input.is_action_just_pressed("ui_left"):
-		root_position += Vector2(root_position.x - (delta * MOVEMENT_MULTIPLIER), 0)
+	if Input.is_action_pressed("ui_left"):
+		root_position -= Vector2((delta * MOVEMENT_MULTIPLIER), 0)
 
 	if Input.is_action_pressed("ui_right"):
-		pass
+		root_position += Vector2((delta * MOVEMENT_MULTIPLIER), 0)
 	update()

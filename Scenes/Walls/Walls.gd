@@ -6,7 +6,7 @@ const steps = 100
 const difficulty = 1 # multiplicator for how far the walls slide to the center
 
 onready var vpSize = get_viewport().size
-onready var width = int(vpSize.x)
+onready var width = ProjectSettings.get("display/window/size/width")
 onready var height = int(vpSize.y)
 
 var offset = 0
@@ -14,7 +14,7 @@ var offset = 0
 func _ready():	
 	regenerate_walls()
 
-func _process(_delta):
+func _process(_delta):	
 	if $VisibilityNotifier2D.is_on_screen():
 		regenerate_walls()
 

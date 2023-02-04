@@ -84,4 +84,4 @@ margin_right = 675.0
 margin_bottom = 50.0
 custom_colors/default_color = Color( 1, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 1 )
-text = "LALA"
+text = "SCORE"

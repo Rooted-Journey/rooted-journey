@@ -4,13 +4,19 @@ onready var cam = get_parent().get_node("MainCam")
 onready var tree = get_parent().get_node("Tree")
 onready var treebottom = tree.position.y + tree.texture.get_height() * tree.scale.y / 2
 onready var xCoord = tree.position.x;
-export var speedMultiplier = 100
+export var speedMultiplier = 200
+
+var sumDelta = 0
 
 func _ready():
 	add_point(Vector2(xCoord, treebottom))
 
 func _process(delta):
 	if cam.position.y < treebottom:
+		return
+		
+	sumDelta += delta
+	if sumDelta < .5:
 		return
 
 	if(Input.is_action_pressed("ui_right")):

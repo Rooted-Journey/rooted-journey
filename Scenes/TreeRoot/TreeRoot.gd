@@ -21,6 +21,8 @@ func _physics_process(delta):
 	
 	var lastPoint = points[points.size() - 1]
 	var newPoint = Vector2(xCoord, cam.position.y)
+	var diff = newPoint - lastPoint
+	$Head/RootHead.rotation_degrees = rad2deg(diff.angle()) - 90
 
 	var coll = $Head.move_and_collide(newPoint - lastPoint)
 	if coll:

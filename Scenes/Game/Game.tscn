@@ -99,4 +99,5 @@ position = Vector2( 512, 241 )
 current = true
 script = ExtResource( 8 )
 
+[connection signal="wall_collide" from="TreeRoot" to="." method="_on_TreeRoot_wall_collide"]
 [connection signal="timeout" from="MoleTimer" to="." method="_on_MoleTimer_timeout"]

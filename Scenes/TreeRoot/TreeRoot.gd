@@ -6,6 +6,8 @@ onready var treebottom = tree.position.y + tree.texture.get_height() * tree.scal
 onready var xCoord = tree.position.x;
 export var speedMultiplier = 200
 
+signal wall_collide
+
 func _ready():
 	add_point(Vector2(xCoord, treebottom))
 	$Head.position = Vector2(xCoord, treebottom)
@@ -31,11 +33,19 @@ func _physics_process(delta):
 
 	var coll = $Head.move_and_collide(newPoint - lastPoint)
 	if coll:
-		print(coll.position)
-		
+		if not handle_collision(coll):
+			return
+
 	add_point(newPoint)
 	
 	while get_point_count() > 1000:
 		remove_point(0)
 		
 	update()
+
+func handle_collision(coll: KinematicCollision2D):	
+	if coll.collider.is_in_group("WALL"):
+		emit_signal("wall_collide")
+		return false
+	
+	return true

@@ -63,3 +63,7 @@ func _on_MoleTimer_timeout():
 	# And now, make the camera faster
 	$MainCam.camDelta.y += 5
 	$HUD/Speed.text = "Speed: " + str($MainCam.camDelta.y - 100)
+
+
+func _on_TreeRoot_wall_collide():
+	var _resp = get_tree().change_scene("res://Scenes/Credits/Credits.tscn")

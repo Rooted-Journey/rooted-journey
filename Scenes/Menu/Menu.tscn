@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Menu/Startbutton.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Graphics/schdarden.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Audio/Hauptaudio/Hauptmenü - zapsplat_nature_forest_bamboo_tree_blow_creak_in_wind_birds_in_bg_australia_001_30138.mp3" type="AudioStream" id=3]
 [ext_resource path="res://graphics/credits4.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Menu/Creditsbutton.gd" type="Script" id=5]
 
 [node name="Menu" type="Node2D"]
 position = Vector2( -2, 4 )
@@ -20,11 +21,13 @@ script = ExtResource( 1 )
 stream = ExtResource( 3 )
 autoplay = true
 
-[node name="Button" type="Button" parent="."]
+[node name="Creditsbutton" type="Button" parent="."]
 margin_left = 401.0
 margin_top = 405.0
 margin_right = 638.0
 margin_bottom = 491.0
 icon = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [connection signal="pressed" from="Startbutton" to="Startbutton" method="_on_Startbutton_pressed"]
+[connection signal="pressed" from="Creditsbutton" to="Creditsbutton" method="_on_Creditsbutton_pressed"]

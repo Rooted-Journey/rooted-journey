@@ -1,3 +1,23 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Credits/Backbutton.gd" type="Script" id=2]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Backbutton" type="Button" parent="."]
+margin_left = 873.0
+margin_top = 513.0
+margin_right = 885.0
+margin_bottom = 533.0
+rect_scale = Vector2( 8.12, 1.96 )
+script = ExtResource( 2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 87.0
+margin_top = 64.0
+margin_right = 127.0
+margin_bottom = 104.0
+rect_scale = Vector2( 21, 8.4 )
+text = "Credits: Anja,Thomas; Dario; Christoph, Farmtonio, Schorsch"
+
+[connection signal="pressed" from="Backbutton" to="Backbutton" method="_on_Backbutton_pressed"]

@@ -25,12 +25,22 @@ jobs:
           mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
       - name: Build
         run: chmod +x ./build.sh && ./build.sh
-      - name: Upload Artifact
+      - name: Upload Artifact Web
         uses: actions/upload-artifact@v3
         with:
-          name: all-builds
-          path: dist/
+          name: web
+          path: dist/web
+      - name: Upload Artifact Linux
+        uses: actions/upload-artifact@v3
+        with:
+          name: linux
+          path: dist/linux
+      - name: Upload Artifact Windows
+        uses: actions/upload-artifact@v3
+        with:
+          name: windows
+          path: dist/windows          
       - name: Deploy to GitHub Pages 🚀        
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-          folder: dist/         
+          folder: dist/web         

@@ -43,9 +43,9 @@ position = Vector2( 1947, 39 )
 scale = Vector2( -50.3482, 1.25 )
 
 [node name="Earth" type="TextureRect" parent="."]
-margin_left = -1803.0
+margin_left = -1871.0
 margin_top = 391.0
-margin_right = 3700.0
+margin_right = 3632.0
 margin_bottom = 1438.0
 texture = ExtResource( 5 )
 expand = true

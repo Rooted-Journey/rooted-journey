@@ -1,12 +1,14 @@
 extends Node
 
 # TODO: Add as parameters and adjust
-export var width = 1250
-export var height = 500
 export var min_left = 200
 export var max_left = 300
 const steps = 100
-const difficulty = 1.5 # multiplicator for how far the walls slide to the center
+const difficulty = 1 # multiplicator for how far the walls slide to the center
+
+onready var vpSize = get_viewport().size
+onready var width = int(vpSize.x)
+onready var height = int(vpSize.y)
 
 var offset = 0
 

@@ -60,7 +60,7 @@ autoplay = true
 [node name="TreeRoot" parent="." instance=ExtResource( 7 )]
 
 [node name="Walls" parent="." instance=ExtResource( 9 )]
-position = Vector2( -193, 377 )
+position = Vector2( 0, 380 )
 
 [node name="Sprite" type="Sprite" parent="."]
 

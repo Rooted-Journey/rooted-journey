@@ -18,6 +18,8 @@ func _process(delta):
 	sumDelta += delta
 	if sumDelta < .5:
 		return
+	
+	sumDelta = 0
 
 	if(Input.is_action_pressed("ui_right")):
 		xCoord += delta * speedMultiplier

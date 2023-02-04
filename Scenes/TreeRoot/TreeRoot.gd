@@ -6,20 +6,12 @@ onready var treebottom = tree.position.y + tree.texture.get_height() * tree.scal
 onready var xCoord = tree.position.x;
 export var speedMultiplier = 200
 
-var sumDelta = 0
-
 func _ready():
 	add_point(Vector2(xCoord, treebottom))
 
 func _process(delta):
 	if cam.position.y < treebottom:
 		return
-		
-	sumDelta += delta
-	if sumDelta < .5:
-		return
-	
-	sumDelta = 0
 
 	if(Input.is_action_pressed("ui_right")):
 		xCoord += delta * speedMultiplier

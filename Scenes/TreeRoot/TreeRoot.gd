@@ -2,7 +2,7 @@ extends Line2D
 
 onready var cam = get_parent().get_node("MainCam")
 onready var tree = get_parent().get_node("Tree")
-onready var treebottom = tree.position.y + tree.texture.get_height() * tree.scale.y / 2
+onready var treebottom = tree.position.y + tree.texture.get_height() * tree.scale.y / 2 - 50
 onready var xCoord = tree.position.x;
 
 signal wall_collide

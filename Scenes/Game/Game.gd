@@ -24,6 +24,11 @@ func _process(delta):
 	Globals.score += delta
 	$HUD/Score.text = str(Globals.score)
 
+	# Check invincibility
+	if Globals.invincibility_remaining > 0:
+		print("Invincibility timer: ", Globals.invincibility_remaining)
+		Globals.invincibility_remaining -= delta
+
 func _on_MoleTimer_timeout():
 	if currentTime > 3000:
 		if randi() % 2 == 1:

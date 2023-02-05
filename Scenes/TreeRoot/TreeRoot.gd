@@ -2,7 +2,7 @@ extends Line2D
 
 onready var cam = get_parent().get_node("MainCam")
 onready var tree = get_parent().get_node("Tree")
-onready var treebottom = tree.position.y + tree.texture.get_height() * tree.scale.y / 2
+onready var treebottom = tree.position.y + tree.texture.get_height() * tree.scale.y / 2 - 50
 onready var xCoord = tree.position.x;
 
 signal wall_collide
@@ -46,7 +46,11 @@ func _physics_process(delta):
 
 func handle_collision(coll: KinematicCollision2D):	
 	if coll.collider.is_in_group("OBSTACLE"):
-		emit_signal("wall_collide")
-		return false
+		if coll.collider.is_in_group("WALL"):
+			emit_signal("wall_collide")
+			return false;
+		if Globals.invincibility_remaining <= 0:
+			emit_signal("wall_collide")
+			return false
 	
 	return true

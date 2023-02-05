@@ -24,7 +24,7 @@ margin_left = 77.0
 margin_top = 42.0
 margin_right = 600.0
 margin_bottom = 422.0
-custom_colors/default_color = Color( 0.984314, 0.933333, 0.933333, 1 )
+custom_colors/default_color = Color( 0.192157, 0.180392, 0.180392, 1 )
 custom_fonts/normal_font = SubResource( 1 )
 text = "Credits:
 Anja E.
@@ -39,11 +39,12 @@ Music by Zapsplat.com
 "
 
 [node name="Backbutton" type="Button" parent="."]
-margin_left = 719.0
-margin_top = 456.0
-margin_right = 851.0
-margin_bottom = 498.0
+margin_left = 718.0
+margin_top = 468.0
+margin_right = 850.0
+margin_bottom = 510.0
 rect_scale = Vector2( 1.94571, 2.22918 )
+rect_pivot_offset = Vector2( -35.9766, 0 )
 icon = ExtResource( 3 )
 script = ExtResource( 2 )
 

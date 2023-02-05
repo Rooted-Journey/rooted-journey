@@ -46,5 +46,3 @@ func _on_MoleTimer_timeout():
 func _on_TreeRoot_wall_collide():
 	var _resp = get_tree().change_scene("res://Scenes/Credits/Credits.tscn")
 
-func _on_Water_area_entered():
-	pass

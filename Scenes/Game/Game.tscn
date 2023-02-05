@@ -61,6 +61,7 @@ autoplay = true
 [node name="TreeRoot" parent="." instance=ExtResource( 7 )]
 position = Vector2( 0, 0 )
 scale = Vector2( 1, 1 )
+points = PoolVector2Array(  )
 
 [node name="Walls" parent="." instance=ExtResource( 9 )]
 position = Vector2( 0, 380 )

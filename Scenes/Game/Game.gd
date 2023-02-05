@@ -21,25 +21,26 @@ func _process(delta):
 	$HUD/Score.text = str(currentTime/100)
 
 func _on_MoleTimer_timeout():
-	var thingNum = randi() % thingsScenesArr.size()
-	var newThing = thingsScenesArr[thingNum].instance()
-	newThing.position.x = randi() % int(get_viewport().size.x)
-	newThing.position.y = randi() % int(get_viewport().size.y) + $MainCam.position.y
-	newThing.scale.x = 0.5
-	newThing.scale.y = 0.5
-	$Walls.add_child(newThing)
-	thingsArr.append(newThing)
-	
-	# Delete too many things
-	if thingsArr.size() > 30:
-		for i in range(thingsArr.size()-20):
-			thingsArr[i].queue_free()
-			thingsArr.remove(i)
-			
-	# And now, make the camera faster
-	$MainCam.camDelta.y += 5
-	Globals.speed += 1
-	$HUD/Speed.text = "Speed: " + str(Globals.speed)
+	if currentTime > 3000:
+		var thingNum = randi() % thingsScenesArr.size()
+		var newThing = thingsScenesArr[thingNum].instance()
+		newThing.position.x = randi() % int(get_viewport().size.x)
+		newThing.position.y = randi() % int(get_viewport().size.y) + $MainCam.position.y
+		newThing.scale.x = 0.5
+		newThing.scale.y = 0.5
+		$TreeRoot.add_child(newThing)
+		thingsArr.append(newThing)
+		
+		# Delete too many things
+		if thingsArr.size() > 30:
+			for i in range(thingsArr.size()-20):
+				thingsArr[i].queue_free()
+				thingsArr.remove(i)
+				
+		# And now, make the camera faster
+		$MainCam.camDelta.y += 5
+		Globals.speed += 1
+		$HUD/Speed.text = "Speed: " + str(Globals.speed)
 
 func _on_TreeRoot_wall_collide():
 	var _resp = get_tree().change_scene("res://Scenes/Credits/Credits.tscn")

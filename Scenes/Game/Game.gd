@@ -2,11 +2,8 @@ extends Node2D
 
 var startTime = 0
 var currentTime = 0
-var things = [preload("res://Assets/Graphics/lava.png"), preload("res://Assets/Graphics/uranium.png"), preload("res://Assets/Graphics/water.png")]
-var mole = preload("res://Assets/Graphics/mole.png")
-var moleArr = []
-var MoleScene = preload("res://Scenes/Mole/Mole.tscn")
-
+var thingsArr = []
+var thingsScenesArr = [preload("res://Scenes/Mole/MoleLeft.tscn"), preload("res://Scenes/Mole/MoleRight.tscn"), preload("res://Scenes/Water/Water.tscn"), preload("res://Scenes/Stone/Stone.tscn"), preload("res://Scenes/Uran/Uran.tscn"), preload("res://Scenes/Lava/Lava.tscn")]
 
 func _ready():
 	randomize()
@@ -24,61 +21,37 @@ func _process(delta):
 	$HUD/Score.text = str(currentTime/100)
 	
 	# Move the moles
-	if moleArr.size() > 0:
-		for i in range(moleArr.size()):
-			if moleArr[i].flip_h == true:
-				moleArr[i].position.x += delta * 100
-			else:
-				moleArr[i].position.x -= delta * 100
+	if thingsArr.size() > 0:
+		for i in range(thingsArr.size()):
+			pass
+			#print(thingsArr[i].name)
+#			if moleArr[i].flip_h == true:
+#				moleArr[i].position.x += delta * 100
+#			else:
+#				moleArr[i].position.x -= delta * 100
 	
 func _on_MoleTimer_timeout():
-	if randi() % 10 + 1 >= 5:
-		var newMole = MoleScene.instance()
-		newMole.position.x = randi() % int(get_viewport().size.x)
-		newMole.position.y = randi() % int(get_viewport().size.y) + $MainCam.position.y
-		newMole.scale.x = 0.5
-		newMole.scale.y = 0.5
-#		if randi() % 10 + 1 > 5:
-#			newMole.flip_h = true
-		$Walls.add_child(newMole)
-		
-		
-		
-#		var newMole = Sprite.new()
-#		newMole.position.x = randi() % int(get_viewport().size.x)
-#		newMole.position.y = randi() % int(get_viewport().size.y) + $MainCam.position.y
-#		newMole.centered = false;
-#		newMole.set_texture(mole)
-#		newMole.set_physics_process(true)
-#		newMole.z_index = 5
-#		newMole.scale.x = 0.5
-#		newMole.scale.y = 0.5
-#		if randi() % 10 + 1 > 5:
-#			newMole.flip_h = true
-#		$Walls.add_child(newMole)
-#		moleArr.append(newMole)
-	else:
-		var newThing = Sprite.new()
-		var thingNum = randi() % things.size()
-		newThing.position.x = randi() % int(get_viewport().size.x)
-		newThing.position.y = randi() % int(get_viewport().size.y) + $MainCam.position.y
-		newThing.centered = false;
-		newThing.set_texture(things[thingNum])
-		newThing.z_index = 5
-		newThing.scale.x = 0.5
-		newThing.scale.y = 0.5
-		$Walls.add_child(newThing)
+	var thingNum = randi() % thingsScenesArr.size()
+	var newThing = thingsScenesArr[thingNum].instance()
+	newThing.position.x = randi() % int(get_viewport().size.x)
+	newThing.position.y = randi() % int(get_viewport().size.y) + $MainCam.position.y
+	newThing.scale.x = 0.5
+	newThing.scale.y = 0.5
+	print(newThing.name)
+	$Walls.add_child(newThing)
+	thingsArr.append(newThing)
 	
-	# Delete too many moles - 10 should be enough at all times
-	if moleArr.size() > 10:
-		for i in range(moleArr.size()-10):
-			moleArr[i].queue_free()
-			moleArr.remove(i)
+	print(thingsArr.size())
+	
+	# Delete too many things
+	if thingsArr.size() > 50:
+		for i in range(thingsArr.size()-30):
+			thingsArr[i].queue_free()
+			thingsArr.remove(i)
 			
 	# And now, make the camera faster
 	$MainCam.camDelta.y += 5
 	$HUD/Speed.text = "Speed: " + str($MainCam.camDelta.y - 100)
-
 
 func _on_TreeRoot_wall_collide():
 	var _resp = get_tree().change_scene("res://Scenes/Credits/Credits.tscn")

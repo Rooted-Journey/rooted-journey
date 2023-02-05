@@ -22,7 +22,7 @@ func _process(delta):
 	# Update Score
 	currentTime = OS.get_system_time_msecs() - startTime
 	Globals.score += delta
-	$HUD/Score.text = str(Globals.score)
+	$HUD/Score.text = str(int(round(Globals.score)))
 
 	# Check invincibility
 	if Globals.invincibility_remaining > 0:

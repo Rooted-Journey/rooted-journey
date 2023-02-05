@@ -44,7 +44,7 @@ func _physics_process(delta):
 	update()
 
 func handle_collision(coll: KinematicCollision2D):	
-	if coll.collider.is_in_group("WALL"):
+	if coll.collider.is_in_group("WALL") or coll.collider.name == "Mole":
 		emit_signal("wall_collide")
 		return false
 	

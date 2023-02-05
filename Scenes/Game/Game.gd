@@ -13,7 +13,7 @@ func _ready():
 	startTime = OS.get_system_time_msecs()
 	$HUD/Speed.text = "Speed: " + str($MainCam.camDelta.y - 100)
 	
-func _process(delta):
+func _physics_process(delta):
 	$MainCam.position += delta * $MainCam.camDelta
 	
 	if not $Meadow/VisibilityNotifier2D.is_on_screen():
@@ -26,7 +26,11 @@ func _process(delta):
 
 	# Check invincibility
 	if Globals.invincibility_remaining > 0:
+		$HUD/InvincibleText.visible = true
 		Globals.invincibility_remaining -= delta
+		$HUD/InvincibleText.text = "Uran: " + str(stepify(Globals.invincibility_remaining, 0.01))
+	else:
+		$HUD/InvincibleText.visible = false
 
 func _on_MoleTimer_timeout():
 	if currentTime > 3000:

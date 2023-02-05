@@ -83,13 +83,13 @@ custom_fonts/normal_font = SubResource( 1 )
 text = "SCORE"
 
 [node name="InvincibleText" type="RichTextLabel" parent="HUD"]
-margin_left = 783.0
+margin_left = 743.0
 margin_top = 10.0
 margin_right = 1012.0
 margin_bottom = 50.0
 custom_colors/default_color = Color( 0.384314, 1, 0, 1 )
 custom_fonts/normal_font = SubResource( 1 )
-text = "SCORE"
+text = "Uranium:"
 
 [node name="Speed" type="RichTextLabel" parent="HUD"]
 margin_left = 403.0

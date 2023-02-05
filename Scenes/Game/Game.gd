@@ -28,7 +28,7 @@ func _physics_process(delta):
 	if Globals.invincibility_remaining > 0:
 		$HUD/InvincibleText.visible = true
 		Globals.invincibility_remaining -= delta
-		$HUD/InvincibleText.text = "Uran: " + str(stepify(Globals.invincibility_remaining, 0.01))
+		$HUD/InvincibleText.text = "Uranium: " + str(stepify(Globals.invincibility_remaining, 0.01))
 	else:
 		$HUD/InvincibleText.visible = false
 

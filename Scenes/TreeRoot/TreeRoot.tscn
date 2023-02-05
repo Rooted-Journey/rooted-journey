@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenes/TreeRoot/TreeRoot.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Graphics/root.png" type="Texture" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 1.99817, 21.3543 )
 
 [node name="TreeRoot" type="Line2D"]
 position = Vector2( 176, -76 )
@@ -18,13 +15,11 @@ script = ExtResource( 1 )
 
 [node name="Head" type="KinematicBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Head"]
-position = Vector2( -1.55412, 28.2003 )
-scale = Vector2( 1, 1 )
-shape = SubResource( 1 )
-
 [node name="RootHead" type="Sprite" parent="Head"]
-position = Vector2( -13.7651, -6.91414e-06 )
+position = Vector2( -13.5, 0 )
 z_index = 100
 texture = ExtResource( 2 )
 centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Head"]
+polygon = PoolVector2Array( -11.989, 1.141, -8.88076, 20.5379, -11.1009, 34.6102, -9.3248, 52.4858, -5.77249, 65.7975, 1.33212, 67.6991, 1.77615, 52.1055, 5.32845, 34.2299, 9.76884, 20.5379, 13.7652, 0.380333 )

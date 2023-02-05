@@ -11,3 +11,4 @@ var invincibility_remaining = 0
 func reset():
 	score = 0
 	speed = 0
+	invincibility_remaining = 0

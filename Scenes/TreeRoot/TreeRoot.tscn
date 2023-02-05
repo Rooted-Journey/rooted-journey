@@ -21,6 +21,7 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="RootHead" type="Sprite" parent="Head"]
+visible = false
 position = Vector2( -13.3211, -2.66233 )
 z_index = 100
 texture = ExtResource( 2 )

@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Assets/Graphics/soil_stones_2.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Graphics/stones_2.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 62, 62 )
 
-[node name="Stone" type="StaticBody2D"]
+[node name="Stone" type="StaticBody2D" groups=["OBSTACLE"]]
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 67, 40 )

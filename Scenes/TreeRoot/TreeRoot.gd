@@ -1,5 +1,7 @@
 extends Line2D
 
+const touch_offset = 30
+
 onready var cam = get_parent().get_node("MainCam")
 onready var tree = get_parent().get_node("Tree")
 onready var treebottom = tree.position.y + tree.texture.get_height() * tree.scale.y / 2 - 50
@@ -31,15 +33,25 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_down"):
 		yoffset += yDelta
 	if Input.is_mouse_button_pressed(BUTTON_LEFT):
-		if get_local_mouse_position().x > $Head.position.x:
+		var localMousePos = get_local_mouse_position()
+		var xDiff = localMousePos.x - $Head.position.x
+		var yDiff = localMousePos.y - $Head.position.y
+
+		if xDiff > touch_offset:
 			xCoord += xDelta
-		else:
+		elif xDiff < -touch_offset:
 			xCoord -= xDelta
+
+		if yDiff > touch_offset:
+			yoffset += yDelta
+		elif yDiff < -touch_offset:
+			yoffset -= yDelta
 	
 	var lastPoint = points[points.size() - 1]
 	var newPoint = Vector2(xCoord, cam.position.y + yoffset)
+
 	var diff = newPoint - lastPoint
-	$Head.rotation = diff.angle() - Vector2.DOWN.angle()
+	$Head.rotation = Vector2.DOWN.angle_to(diff)
 
 	var coll = $Head.move_and_collide(diff)
 	if coll:

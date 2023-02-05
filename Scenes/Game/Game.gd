@@ -57,11 +57,13 @@ func _on_MoleTimer_timeout():
 		# Delete too many things
 		if thingsArr.size() > maxThingsOnScreen / 2:
 			for i in range(thingsArr.size()-maxThingsOnScreen):
-				thingsArr[i].queue_free()
+				if is_instance_valid(thingsArr[i]):
+					thingsArr[i].queue_free()
 				thingsArr.remove(i)
 		if molesArr.size() > maxThingsOnScreen / 2:
 			for i in range(molesArr.size()-maxThingsOnScreen):
-				molesArr[i].queue_free()
+				if is_instance_valid(thingsArr[i]):
+					molesArr[i].queue_free()
 				molesArr.remove(i)
 				
 		# And now, make the camera faster

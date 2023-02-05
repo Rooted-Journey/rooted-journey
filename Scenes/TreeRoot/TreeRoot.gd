@@ -15,7 +15,7 @@ func _physics_process(delta):
 	if cam.position.y < treebottom:
 		return
 		
-	var speedMultiplier = 100
+	var speedMultiplier = 100 + Globals.speed
 
 	if Input.is_action_pressed("ui_right"):
 		xCoord += delta * speedMultiplier

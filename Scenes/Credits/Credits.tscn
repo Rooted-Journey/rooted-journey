@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Fonts/ShareTechMono-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scenes/Credits/Backbutton.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Graphics/button_back.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Graphics/credits.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/Credits/Credits.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/Credits/TryAgainButton.gd" type="Script" id=6]
 
 [sub_resource type="DynamicFont" id=4]
 size = 27
@@ -90,7 +91,7 @@ margin_right = 958.0
 margin_bottom = 496.0
 rect_pivot_offset = Vector2( -35.9766, 0 )
 icon = ExtResource( 3 )
-script = ExtResource( 2 )
+script = ExtResource( 6 )
 
 [connection signal="pressed" from="Backbutton" to="Backbutton" method="_on_Backbutton_pressed"]
 [connection signal="pressed" from="TryAgainButton" to="TryAgainButton" method="_on_Backbutton_pressed"]

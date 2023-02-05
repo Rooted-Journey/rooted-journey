@@ -4,6 +4,7 @@ var startTime = 0
 var currentTime = 0
 var thingsArr = []
 var thingsScenesArr = [preload("res://Scenes/Mole/MoleLeft.tscn"), preload("res://Scenes/Mole/MoleRight.tscn"), preload("res://Scenes/Water/Water.tscn"), preload("res://Scenes/Stone/Stone.tscn"), preload("res://Scenes/Uran/Uran.tscn"), preload("res://Scenes/Lava/Lava.tscn")]
+var maxThingsOnScreen = 5
 
 func _ready():
 	randomize()
@@ -32,8 +33,8 @@ func _on_MoleTimer_timeout():
 		thingsArr.append(newThing)
 		
 		# Delete too many things
-		if thingsArr.size() > 30:
-			for i in range(thingsArr.size()-20):
+		if thingsArr.size() > maxThingsOnScreen:
+			for i in range(thingsArr.size()-maxThingsOnScreen):
 				thingsArr[i].queue_free()
 				thingsArr.remove(i)
 				

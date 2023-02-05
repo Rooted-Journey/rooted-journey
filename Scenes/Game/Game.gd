@@ -26,7 +26,6 @@ func _process(delta):
 
 	# Check invincibility
 	if Globals.invincibility_remaining > 0:
-		print("Invincibility timer: ", Globals.invincibility_remaining)
 		Globals.invincibility_remaining -= delta
 
 func _on_MoleTimer_timeout():

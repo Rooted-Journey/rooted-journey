@@ -4,6 +4,8 @@ onready var cam = get_parent().get_node("MainCam")
 onready var tree = get_parent().get_node("Tree")
 onready var treebottom = tree.position.y + tree.texture.get_height() * tree.scale.y / 2 - 50
 onready var xCoord = tree.position.x;
+onready var normal_root = load("res://Assets/Graphics/root.png")
+onready var uranium_root = load("res://Assets/Graphics/root_uranium.png")
 
 signal wall_collide
 
@@ -42,6 +44,12 @@ func _physics_process(delta):
 	while get_point_count() > 200:
 		remove_point(0)
 		
+	#Handle invisibility
+	if Globals.invincibility_remaining > 0:
+		$Head/RootHead.texture = uranium_root
+	else:
+		$Head/RootHead.texture = normal_root
+
 	update()
 
 func handle_collision(coll: KinematicCollision2D):	

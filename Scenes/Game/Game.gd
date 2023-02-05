@@ -6,7 +6,7 @@ var thingsArr = []
 var molesArr = []
 var moleScenesArr = [preload("res://Scenes/Mole/MoleLeft.tscn"), preload("res://Scenes/Mole/MoleRight.tscn")]
 var thingsScenesArr = [preload("res://Scenes/Water/Water.tscn"), preload("res://Scenes/Stone/Stone.tscn"), preload("res://Scenes/Uran/Uran.tscn"), preload("res://Scenes/Lava/Lava.tscn")]
-var maxThingsOnScreen = 10
+var maxThingsOnScreen = 30
 
 func _ready():
 	randomize()

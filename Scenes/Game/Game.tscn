@@ -92,7 +92,6 @@ custom_fonts/normal_font = SubResource( 1 )
 text = "SPEED: 123"
 
 [node name="MoleTimer" type="Timer" parent="."]
-wait_time = 0.5
 autostart = true
 
 [node name="MainCam" type="Camera2D" parent="."]

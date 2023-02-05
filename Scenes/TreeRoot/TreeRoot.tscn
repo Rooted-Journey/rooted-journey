@@ -4,6 +4,7 @@
 [ext_resource path="res://Assets/Graphics/root.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1.99817, 21.3543 )
 
 [node name="TreeRoot" type="Line2D"]
 position = Vector2( 176, -76 )
@@ -18,7 +19,8 @@ script = ExtResource( 1 )
 [node name="Head" type="KinematicBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Head"]
-position = Vector2( -3.33028, 39.5546 )
+position = Vector2( -1.55412, 28.2003 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="RootHead" type="Sprite" parent="Head"]

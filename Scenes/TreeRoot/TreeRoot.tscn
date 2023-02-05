@@ -24,7 +24,7 @@ position = Vector2( -3.33028, 39.5546 )
 shape = SubResource( 1 )
 
 [node name="RootHead" type="Sprite" parent="Head"]
-position = Vector2( -13.3211, -2.66233 )
+position = Vector2( -13.7651, -6.91414e-06 )
 z_index = 100
 texture = ExtResource( 2 )
 centered = false

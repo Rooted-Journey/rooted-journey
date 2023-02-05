@@ -29,6 +29,7 @@ margin_right = 297.0
 margin_bottom = 114.0
 texture = ExtResource( 3 )
 expand = true
+flip_h = true
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect/TextureRect"]
 margin_left = 170.0
@@ -36,6 +37,7 @@ margin_top = -2.0
 margin_right = 318.0
 margin_bottom = 126.0
 texture = ExtResource( 2 )
+flip_h = true
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 margin_left = 403.0
@@ -44,6 +46,7 @@ margin_right = 595.0
 margin_bottom = 128.0
 texture = ExtResource( 3 )
 expand = true
+flip_h = true
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect2"]
 margin_left = 181.0
@@ -54,12 +57,11 @@ texture = ExtResource( 2 )
 expand = true
 
 [node name="TextureRect3" type="TextureRect" parent="."]
-margin_left = 731.0
-margin_top = 2.0
-margin_right = 947.0
-margin_bottom = 124.0
+margin_left = 770.0
+margin_right = 986.0
+margin_bottom = 128.0
 texture = ExtResource( 3 )
-expand = true
+flip_h = true
 
 [node name="TextureRect4" type="TextureRect" parent="."]
 margin_left = 932.0
@@ -76,6 +78,7 @@ margin_right = 1213.0
 margin_bottom = 127.0
 texture = ExtResource( 2 )
 expand = true
+flip_h = true
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect5"]
 margin_left = 187.0
@@ -120,11 +123,9 @@ expand = true
 anchor_right = 0.108
 anchor_bottom = 0.156
 margin_left = 2066.0
-margin_top = 5.0
 margin_right = 1825.34
-margin_bottom = 103.032
+margin_bottom = 108.032
 texture = ExtResource( 3 )
-expand = true
 
 [node name="TextureRect11" type="TextureRect" parent="."]
 anchor_right = 0.403
@@ -137,11 +138,10 @@ expand = true
 
 [node name="TextureRect12" type="TextureRect" parent="."]
 margin_left = 2569.0
-margin_top = 5.0
+margin_top = 1.0
 margin_right = 2738.0
-margin_bottom = 128.0
+margin_bottom = 129.0
 texture = ExtResource( 2 )
-expand = true
 
 [node name="TextureRect13" type="TextureRect" parent="."]
 margin_left = 2769.0
@@ -153,19 +153,17 @@ expand = true
 
 [node name="TextureRect14" type="TextureRect" parent="."]
 margin_left = 2951.0
-margin_top = 3.0
+margin_top = 1.0
 margin_right = 3117.0
-margin_bottom = 121.0
+margin_bottom = 129.0
 texture = ExtResource( 2 )
-expand = true
+flip_h = true
 
 [node name="TextureRect15" type="TextureRect" parent="."]
 margin_left = 3171.0
-margin_top = 5.0
 margin_right = 3345.0
 margin_bottom = 128.0
 texture = ExtResource( 2 )
-expand = true
 
 [node name="TextureRect16" type="TextureRect" parent="."]
 margin_left = 3325.0
@@ -176,12 +174,12 @@ texture = ExtResource( 3 )
 expand = true
 
 [node name="TextureRect17" type="TextureRect" parent="."]
-margin_left = 3485.0
-margin_top = 3.0
-margin_right = 3685.0
-margin_bottom = 126.0
+margin_left = 3524.0
+margin_top = 1.0
+margin_right = 3724.0
+margin_bottom = 129.0
 texture = ExtResource( 3 )
-expand = true
+flip_h = true
 
 [node name="TextureRect18" type="TextureRect" parent="."]
 margin_left = 3680.0
@@ -193,11 +191,10 @@ expand = true
 
 [node name="TextureRect19" type="TextureRect" parent="."]
 margin_left = 3873.0
-margin_top = 5.0
+margin_top = 1.0
 margin_right = 4022.0
-margin_bottom = 128.0
+margin_bottom = 129.0
 texture = ExtResource( 2 )
-expand = true
 
 [node name="TextureRect20" type="TextureRect" parent="."]
 margin_left = 4046.0
@@ -222,6 +219,7 @@ margin_right = 4482.0
 margin_bottom = 112.0
 texture = ExtResource( 3 )
 expand = true
+flip_h = true
 
 [node name="TextureRect23" type="TextureRect" parent="."]
 margin_left = 4482.0

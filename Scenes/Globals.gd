@@ -1,6 +1,6 @@
 extends Node
 
-const INVINCIBILITY_DURATION = 3 #in seconds
+const INVINCIBILITY_DURATION = 5
 const WATER_POINTS = 10
 const STONE_POINTS = -10
 

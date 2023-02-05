@@ -4,7 +4,7 @@
 
 ![grafik](https://user-images.githubusercontent.com/35960947/216775679-1272c951-2b30-422c-941f-2a16105ed333.png)
 
-Try to avoid touching the wall or collide with moles. Collect points by touching water. You lose points by colliding with lava or stones. Uranium makes you invincible for 3 seconds. The root gets faster by going deeper in the ground.
+Try to avoid touching the wall or collide with moles. Collect points by touching water. You lose points by colliding with lava or stones. Uranium makes you invincible for 5 seconds. The root gets faster by going deeper in the ground.
 
 ![image](https://user-images.githubusercontent.com/56290011/216819709-6cd0099d-e69d-4878-bd07-d8a3c4773d02.png)
 

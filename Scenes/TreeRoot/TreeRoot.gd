@@ -46,7 +46,11 @@ func _physics_process(delta):
 
 func handle_collision(coll: KinematicCollision2D):	
 	if coll.collider.is_in_group("OBSTACLE"):
-		emit_signal("wall_collide")
-		return false
+		if coll.collider.is_in_group("WALL"):
+			emit_signal("wall_collide")
+			return false;
+		if Globals.invincibility_remaining <= 0:
+			emit_signal("wall_collide")
+			return false
 	
 	return true

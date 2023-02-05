@@ -38,7 +38,7 @@ func _physics_process(delta):
 
 	add_point(newPoint)
 	
-	while get_point_count() > 1000:
+	while get_point_count() > 200:
 		remove_point(0)
 		
 	update()

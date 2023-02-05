@@ -15,24 +15,24 @@ func _physics_process(delta):
 	if cam.position.y < treebottom:
 		return
 		
-	var speedMultiplier = 300 + Globals.speed
+	var xDelta = delta * (300 + Globals.speed)
 
 	if Input.is_action_pressed("ui_right"):
-		xCoord += delta * speedMultiplier
+		xCoord += xDelta
 	if Input.is_action_pressed("ui_left"):
-		xCoord -= delta * speedMultiplier
+		xCoord -= xDelta
 	if Input.is_mouse_button_pressed(BUTTON_LEFT):
 		if get_local_mouse_position().x > $Head.position.x:
-			xCoord += delta * speedMultiplier
+			xCoord += xDelta
 		else:
-			xCoord -= delta * speedMultiplier
+			xCoord -= xDelta
 	
 	var lastPoint = points[points.size() - 1]
 	var newPoint = Vector2(xCoord, cam.position.y)
 	var diff = newPoint - lastPoint
 	$Head/RootHead.rotation_degrees = rad2deg(diff.angle()) - 90
 
-	var coll = $Head.move_and_collide(newPoint - lastPoint)
+	var coll = $Head.move_and_collide(diff)
 	if coll:
 		if not handle_collision(coll):
 			return

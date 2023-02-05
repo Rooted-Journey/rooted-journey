@@ -22,6 +22,7 @@ margin_left = 100.0
 margin_top = 449.0
 margin_right = 232.0
 margin_bottom = 491.0
+focus_neighbour_bottom = NodePath("../Creditsbutton")
 icon = ExtResource( 2 )
 script = ExtResource( 1 )
 
@@ -34,6 +35,7 @@ margin_left = 100.0
 margin_top = 497.0
 margin_right = 232.0
 margin_bottom = 539.0
+focus_neighbour_top = NodePath("../Startbutton")
 icon = ExtResource( 4 )
 script = ExtResource( 5 )
 

@@ -1,6 +1,8 @@
 extends Node
 
 const INVINCIBILITY_DURATION = 3 #in seconds
+const WATER_POINTS = 100
+const STONE_POINTS = -100
 
 var score = 0
 var speed = 1

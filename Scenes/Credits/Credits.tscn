@@ -1,10 +1,20 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Fonts/ShareTechMono-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scenes/Credits/Backbutton.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Graphics/button_back.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Graphics/credits.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/Credits/Credits.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=4]
+size = 27
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=3]
+
+[sub_resource type="DynamicFont" id=5]
+size = 27
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 27
@@ -16,19 +26,25 @@ script = ExtResource( 5 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ScoreLabel" type="Label" parent="CanvasLayer"]
-margin_left = 276.0
-margin_top = 491.0
-margin_right = 476.0
-margin_bottom = 505.0
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+modulate = Color( 0.615686, 0.819608, 0.905882, 1 )
+margin_left = 252.0
+margin_top = 483.0
+margin_right = 627.0
+margin_bottom = 514.0
+custom_colors/font_color = Color( 0.615686, 0.819608, 0.905882, 1 )
+custom_fonts/font = SubResource( 4 )
 text = "1231312141412414124124124"
 
 [node name="Message" type="Label" parent="CanvasLayer"]
-margin_left = 115.0
-margin_top = 493.0
-margin_right = 228.0
-margin_bottom = 524.0
-text = "Dein Punktestand
+modulate = Color( 0.615686, 0.819608, 0.905882, 1 )
+margin_left = 80.0
+margin_top = 483.0
+margin_right = 320.0
+margin_bottom = 548.0
+theme = SubResource( 3 )
+custom_colors/font_color = Color( 0.615686, 0.819608, 0.905882, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "your score
 "
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -46,16 +62,16 @@ margin_right = 600.0
 margin_bottom = 422.0
 custom_colors/default_color = Color( 0.192157, 0.180392, 0.180392, 1 )
 custom_fonts/normal_font = SubResource( 1 )
-text = "Credits:
-Anja E.
-Anton Sch.
-Christoph L.
-Dario P.
-Gregor H.
-Michael L.
-Thomas C.
+text = "credits:
+anja e.
+anton sch.
+christoph l.
+dario p.
+gregor h.
+michael l.
+thomas ch.
 
-Music by Zapsplat.com
+music by zapsplat.com
 "
 
 [node name="Backbutton" type="Button" parent="."]

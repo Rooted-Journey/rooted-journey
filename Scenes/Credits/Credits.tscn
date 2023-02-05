@@ -39,11 +39,10 @@ Music by Zapsplat.com
 "
 
 [node name="Backbutton" type="Button" parent="."]
-margin_left = 718.0
-margin_top = 468.0
-margin_right = 850.0
-margin_bottom = 510.0
-rect_scale = Vector2( 1.94571, 2.22918 )
+margin_left = 826.0
+margin_top = 509.0
+margin_right = 958.0
+margin_bottom = 551.0
 rect_pivot_offset = Vector2( -35.9766, 0 )
 icon = ExtResource( 3 )
 script = ExtResource( 2 )

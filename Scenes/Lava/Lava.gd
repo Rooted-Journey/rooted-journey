@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-func _ready():
+func _process(_delta):
 	if Globals.invincibility_remaining <= 0:
 		collision_mask = 1
 		collision_layer = 1

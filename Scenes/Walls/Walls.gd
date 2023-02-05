@@ -1,7 +1,7 @@
 extends Node
 
 export var min_offset = 150
-const steps = 100
+const steps = 150
 const left_max_perc = 60.0;
 const min_space_perc = 30.0;
 const difficulty = 1 # multiplicator for how far the walls slide to the center

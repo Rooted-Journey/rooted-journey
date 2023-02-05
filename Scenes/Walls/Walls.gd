@@ -1,13 +1,16 @@
 extends Node
 
 export var min_offset = 200
-export var max_offset = 300
 const steps = 100
+const left_max_perc = 55.0;
+const min_space_perc = 30.0;
 const difficulty = 1 # multiplicator for how far the walls slide to the center
 
 onready var vpSize = get_viewport().size
 onready var width = ProjectSettings.get("display/window/size/width")
 onready var height = int(vpSize.y)
+onready var max_offset = int(width * (left_max_perc / 100)); 
+onready var min_space = int(width * (min_space_perc / 100));
 
 var offset = 0
 
@@ -32,14 +35,15 @@ func regenerate_walls():
 	
 	var min_left_eff = int(min_offset * difficulty)
 	var max_left_eff = int(max_offset * difficulty)
-	var min_right_eff = width - max_left_eff
-	var max_right_eff = width - min_left_eff
+	var max_right = width - min_left_eff
 	
 	for y in range(offset + height, offset, -1 * steps):
 		var randXLeft = randi() % (max_left_eff - min_left_eff) + min_left_eff
 		arrLeft.push_back(Vector2(randXLeft, y))
+
+		var min_right = randXLeft + min_space;
 		
-		var randXRight = randi() % (max_right_eff - min_right_eff) + min_right_eff
+		var randXRight = min_right if max_right == min_right else randi() % (max_right - min_right) + min_right
 		arrRight.push_back(Vector2(randXRight, y))
 		
 	

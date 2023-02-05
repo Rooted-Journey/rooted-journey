@@ -83,4 +83,14 @@ rect_pivot_offset = Vector2( -35.9766, 0 )
 icon = ExtResource( 3 )
 script = ExtResource( 2 )
 
+[node name="TryAgainButton" type="Button" parent="."]
+margin_left = 826.0
+margin_top = 454.0
+margin_right = 958.0
+margin_bottom = 496.0
+rect_pivot_offset = Vector2( -35.9766, 0 )
+icon = ExtResource( 3 )
+script = ExtResource( 2 )
+
 [connection signal="pressed" from="Backbutton" to="Backbutton" method="_on_Backbutton_pressed"]
+[connection signal="pressed" from="TryAgainButton" to="TryAgainButton" method="_on_Backbutton_pressed"]

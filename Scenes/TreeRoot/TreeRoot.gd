@@ -7,6 +7,8 @@ onready var xCoord = tree.position.x;
 onready var normal_root = load("res://Assets/Graphics/root.png")
 onready var uranium_root = load("res://Assets/Graphics/root_uranium.png")
 
+var yoffset = 0
+
 signal wall_collide
 
 func _ready():
@@ -18,11 +20,16 @@ func _physics_process(delta):
 		return
 		
 	var xDelta = delta * (300 + Globals.speed)
+	var yDelta = delta * 100
 
 	if Input.is_action_pressed("ui_right"):
 		xCoord += xDelta
 	if Input.is_action_pressed("ui_left"):
 		xCoord -= xDelta
+	if Input.is_action_pressed("ui_up"):
+		yoffset -= yDelta
+	if Input.is_action_pressed("ui_down"):
+		yoffset += yDelta
 	if Input.is_mouse_button_pressed(BUTTON_LEFT):
 		if get_local_mouse_position().x > $Head.position.x:
 			xCoord += xDelta
@@ -30,7 +37,7 @@ func _physics_process(delta):
 			xCoord -= xDelta
 	
 	var lastPoint = points[points.size() - 1]
-	var newPoint = Vector2(xCoord, cam.position.y)
+	var newPoint = Vector2(xCoord, cam.position.y + yoffset)
 	var diff = newPoint - lastPoint
 	$Head.rotation = diff.angle() - Vector2.DOWN.angle()
 

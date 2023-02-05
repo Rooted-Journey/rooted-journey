@@ -8,7 +8,8 @@
 ![Screenshot](Assets/Graphics/gamescreenshot.png)
 
 
-![image](https://user-images.githubusercontent.com/56290011/216819324-0eab1c9f-9ec1-4278-8683-0dc8d3319d25.png)
+![image](https://user-images.githubusercontent.com/56290011/216819387-6077e372-4b7b-4c09-939d-4481eabe50ca.png)
+
 
 
 Created on the Global Game Jam 2023: https://globalgamejam.org/2023/games/rooted-journey-2

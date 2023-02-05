@@ -19,7 +19,7 @@ func _process(delta):
 	
 	# Update Score
 	currentTime = OS.get_system_time_msecs() - startTime
-	Globals.score = currentTime/100
+	Globals.score += delta
 	$HUD/Score.text = str(Globals.score)
 
 func _on_MoleTimer_timeout():

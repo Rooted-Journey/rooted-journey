@@ -4,7 +4,6 @@ onready var cam = get_parent().get_node("MainCam")
 onready var tree = get_parent().get_node("Tree")
 onready var treebottom = tree.position.y + tree.texture.get_height() * tree.scale.y / 2
 onready var xCoord = tree.position.x;
-export var speedMultiplier = 200
 
 signal wall_collide
 
@@ -15,6 +14,8 @@ func _ready():
 func _physics_process(delta):
 	if cam.position.y < treebottom:
 		return
+		
+	var speedMultiplier = 100 + Globals.speed
 
 	if Input.is_action_pressed("ui_right"):
 		xCoord += delta * speedMultiplier

@@ -14,6 +14,10 @@ config/name="Rooted Journey"
 run/main_scene="res://Scenes/Menu/Menu.tscn"
 config/icon="res://Assets/Graphics/icon.png"
 
+[autoload]
+
+Globals="*res://Scenes/Globals.gd"
+
 [display]
 
 window/size/resizable=false
